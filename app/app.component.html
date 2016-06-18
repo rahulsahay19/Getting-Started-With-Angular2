@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<h2>My favorite Movie is: {{myMovie.name}}</h2>
+<p>Movies:</p>
+<ul>
+    <li *ngFor="let movie of movies">
+        {{ movie.name }}
+    </li>
+</ul>
+<p *ngIf="movies.length 
+ > 3">There are good number of movies here!</p>
+
+ <p>
+  <click-me></click-me>
+</p>
+
+<h4>Enter Any Keys!</h4>
+<div><key-up></key-up></div>
+
+<h4>In Memory Movie List Ccollection</h4>
+<p><i>Add a new Movie</i></p>
+<div><Movie-List></Movie-List></div>

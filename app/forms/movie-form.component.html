@@ -1,0 +1,29 @@
+{{inspect}}
+<div class="container">
+  <h1>Movie Form</h1>
+  <form>
+    <div class="form-group">
+      <label for="movieName">Movie Name</label>
+      <input type="text" class="form-control"  [(ngModel)]="model.movieName" required>
+    </div>
+    <div class="form-group">
+      <label for="directorName">Director Name</label>
+      <input type="text" class="form-control" [(ngModel)]="model.directorName" required>
+    </div>
+    <div class="form-group">
+      <label for="releaseYear">Release Year</label>
+      <input type="text" class="form-control" [(ngModel)]="model.releaseYear" required>
+    </div>
+    <div class="form-group">
+      <label for="reviews">Reviews</label>
+      <input type="text" class="form-control" [(ngModel)]="model.reviews">
+    </div>
+    <div class="form-group">
+      <label for="genres">Select Genres</label>
+      <select class="form-control" required>
+    <option *ngFor="let m of genres" [value]="m">{{m}}</option>
+  </select>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
