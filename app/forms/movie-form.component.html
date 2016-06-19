@@ -4,8 +4,12 @@
   <form>
     <div class="form-group">
       <label for="movieName">Movie Name</label>
-      <input type="text" class="form-control"  [(ngModel)]="model.movieName" required>
+      <input type="text" class="form-control" [(ngModel)]="model.movieName" ngControl="movieName" #lookinside #formVar="ngForm" required>
     </div>
+    <div [hidden]="formVar.valid || formVar.pristine" class="alert alert-danger">
+      Movie Name is required
+    </div>
+    <br>Change State Tracking: {{lookinside.className}}
     <div class="form-group">
       <label for="directorName">Director Name</label>
       <input type="text" class="form-control" [(ngModel)]="model.directorName" required>
