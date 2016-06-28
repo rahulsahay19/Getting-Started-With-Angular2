@@ -9,29 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var movie_1 = require('./movie');
 var ClickMeComponent_1 = require('./ClickMeComponent');
 var KeyUpComponent_1 = require('./KeyUpComponent');
 var MovieListComponent_1 = require('./MovieListComponent');
+var movie_service_1 = require('./movie.service');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(movieService) {
         this.title = 'Movies List';
-        this.movies = [
-            new movie_1.Movie(1, 'Gone with the wind'),
-            new movie_1.Movie(2, 'Twister'),
-            new movie_1.Movie(3, 'Grease'),
-            new movie_1.Movie(4, 'Die Hard'),
-            new movie_1.Movie(5, 'Jurassic Park')
-        ];
-        this.myMovie = this.movies[0];
+        this.movies = movieService.getMovies();
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             templateUrl: 'app/app.component.html',
-            directives: [ClickMeComponent_1.ClickMeComponent, KeyUpComponent_1.KeyUpComponent, MovieListComponent_1.MovieListComponent]
+            directives: [ClickMeComponent_1.ClickMeComponent, KeyUpComponent_1.KeyUpComponent, MovieListComponent_1.MovieListComponent],
+            providers: [movie_service_1.MovieService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [movie_service_1.MovieService])
     ], AppComponent);
     return AppComponent;
 }());
