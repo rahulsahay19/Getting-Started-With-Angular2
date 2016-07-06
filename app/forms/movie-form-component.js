@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var movie_1 = require('./movie');
 var MovieFormComponent = (function () {
     function MovieFormComponent() {
+        this.imageURL = "http://moviereview.azurewebsites.net/images/rsz_avatar.jpg";
         this.genres = ['Drama', 'Romance',
             'Adventure', 'Sci-Fiction', 'Thriller'];
         this.model = new movie_1.Movie(1, 'Titanic', 'James Cameron', '1997', 27);

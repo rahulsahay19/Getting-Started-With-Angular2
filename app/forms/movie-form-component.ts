@@ -6,6 +6,7 @@ import { Movie }    from './movie';
   templateUrl: 'app/forms/movie-form.component.html'
 })
 export class MovieFormComponent {
+  imageURL="http://moviereview.azurewebsites.net/images/rsz_avatar.jpg";
   genres = ['Drama', 'Romance',
             'Adventure', 'Sci-Fiction','Thriller'];
   model = new Movie(1, 'Titanic', 'James Cameron', '1997',27);
