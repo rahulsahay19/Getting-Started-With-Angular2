@@ -5,4 +5,6 @@ import { MovieFormComponent } from './movie-form-component';
   template: '<movie-form></movie-form>',
   directives: [MovieFormComponent]
 })
-export class AppComponent { }
+export class AppComponent { 
+  
+}

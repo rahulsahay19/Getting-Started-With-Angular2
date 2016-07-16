@@ -16,6 +16,7 @@ import {MovieService} from './movie.service';
 })
 export class AppComponent {
    title = 'Movies List';
+   
   // movies = [
   //   new Movie(1, 'Gone with the wind'),
   //   new Movie(2, 'Twister'),

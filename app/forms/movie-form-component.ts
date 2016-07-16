@@ -6,6 +6,7 @@ import { Movie }    from './movie';
   templateUrl: 'app/forms/movie-form.component.html'
 })
 export class MovieFormComponent {
+  isDanger=false;
   imageURL="http://moviereview.azurewebsites.net/images/rsz_avatar.jpg";
   genres = ['Drama', 'Romance',
             'Adventure', 'Sci-Fiction','Thriller'];

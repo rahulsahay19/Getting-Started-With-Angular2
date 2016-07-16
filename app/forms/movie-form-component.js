@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var movie_1 = require('./movie');
 var MovieFormComponent = (function () {
     function MovieFormComponent() {
+        this.isDanger = false;
         this.imageURL = "http://moviereview.azurewebsites.net/images/rsz_avatar.jpg";
         this.genres = ['Drama', 'Romance',
             'Adventure', 'Sci-Fiction', 'Thriller'];
