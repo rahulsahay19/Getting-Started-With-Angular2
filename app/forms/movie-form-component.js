@@ -12,12 +12,22 @@ var core_1 = require('@angular/core');
 var movie_1 = require('./movie');
 var MovieFormComponent = (function () {
     function MovieFormComponent() {
-        this.isDanger = false;
-        this.imageURL = "http://moviereview.azurewebsites.net/images/rsz_avatar.jpg";
+        this.isDanger = true;
+        this.isOk = false;
+        // imageURL="http://moviereview.azurewebsites.net/images/rsz_avatar.jpg";
+        this.imageURL = "app/forms/Images/rsz_avatar.jpg";
         this.genres = ['Drama', 'Romance',
             'Adventure', 'Sci-Fiction', 'Thriller'];
         this.model = new movie_1.Movie(1, 'Titanic', 'James Cameron', '1997', 27);
         this.submitted = false;
+        this.change = new core_1.EventEmitter();
+        this.serverData = {
+            title: "Die Another Day",
+            isOk: true,
+            OnCheck: function () {
+                this.isOk = !this.serverData.isOk;
+            }
+        };
     }
     MovieFormComponent.prototype.onSubmit = function () { this.submitted = true; };
     Object.defineProperty(MovieFormComponent.prototype, "inspect", {
@@ -26,6 +36,24 @@ var MovieFormComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    MovieFormComponent.prototype.OnClick = function ($event) {
+        console.log('Hello Angular2', $event);
+    };
+    MovieFormComponent.prototype.OnCheck = function () {
+        this.isOk = !this.isOk;
+        this.change.emit({ NewValue: this.isOk });
+    };
+    MovieFormComponent.prototype.onOkChange = function ($event) {
+        console.log($event);
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], MovieFormComponent.prototype, "isOk", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], MovieFormComponent.prototype, "change", void 0);
     MovieFormComponent = __decorate([
         core_1.Component({
             selector: 'movie-form',

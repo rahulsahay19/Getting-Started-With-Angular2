@@ -1,9 +1,17 @@
-{{inspect}}
 <div class="container">
   <div>
     <!--{{imageURL}} -->
 
-    <img [src]="imageURL"/>
+    <img [src]="imageURL" />
+    <i class="glyphicon"
+     [class.glyphicon-thumbs-up]="!isOk"
+     [class.glyphicon-thumbs-down]="isOk"
+     (click)="OnCheck()"
+     (change)="onOkChange($event)"
+     >
+     </i>
+    <!--<i class="glyphicon glyphicon-thumbs-down"></i>-->
+
     <!--<img bind-src="imageURL"/>-->
   </div>
   <h1>Movie Form</h1>
@@ -11,7 +19,9 @@
     <div class="form-group">
       <label for="movieName">Movie Name</label>
       <input type="text" class="form-control" [(ngModel)]="model.movieName" ngControl="movieName" #lookinside #formVar="ngForm" required>
+
     </div>
+    {{inspect}}
     <div [hidden]="formVar.valid || formVar.pristine" class="alert alert-danger">
       Movie Name is required
     </div>
@@ -34,6 +44,6 @@
     <option *ngFor="let m of genres" [value]="m">{{m}}</option>
   </select>
     </div>
-    <button type="submit" class="btn" [class.btn-danger]="isDanger">Submit</button>
+    <button type="submit" (click)="OnClick($event)" class="btn" [class.btn-danger]="isDanger" [style.backgroundColor]="isDanger ? 'red': 'black'">Submit</button>
   </form>
 </div>
