@@ -3,7 +3,9 @@
         </h4>
 
 <div class="ui raised segment">
-    Title:- {{movieReview.movieName | uppercase }} <br> 
+    Title:- {{movieReview.movieName | uppercase }} <br>
+    Reviewer Name:- {{movieReview.reviewer.name}} <br>
+    Reviewer City:- {{movieReview.reviewer.city}} <br> 
     Review:- {{movieReview.review | review }} <br>
     Rating:- {{movieReview.rating}} <br>
 </div>
