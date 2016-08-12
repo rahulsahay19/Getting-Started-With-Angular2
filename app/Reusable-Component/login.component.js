@@ -9,23 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var login_component_1 = require("./login.component");
-var AppComponent = (function () {
-    function AppComponent() {
+var LoginPanelComponent = (function () {
+    function LoginPanelComponent() {
     }
-    AppComponent = __decorate([
+    LoginPanelComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            // directives:[CustomPanelComponent],
-            // template:`<c-panel>
-            //   Hello Angular 2!!!
-            // </c-panel>`
-            directives: [login_component_1.LoginPanelComponent],
-            template: "<login-panel></login-panel>"
+            selector: 'login-panel',
+            templateUrl: 'app/Reusable-Component/LoginPanel.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], LoginPanelComponent);
+    return LoginPanelComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.LoginPanelComponent = LoginPanelComponent;
+//# sourceMappingURL=login.component.js.map
