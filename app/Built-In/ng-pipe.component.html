@@ -1,0 +1,15 @@
+<h4 class="ui horizontal divider header">
+          Piping Options
+        </h4>
+    
+        <div class="ui raised segment">
+            Movie Name:- {{movie.title | uppercase }} <br>
+            Release Date:- {{movie.releaseDate | date:"MM/dd/yy"}} <br>
+            Director Name:- {{movie.directorName}} <br>
+            No of Reviews:- {{movie.noOfReviews | number}} <br>
+            Ticket Price:- {{movie.ticketPrice | currency:'INR'}} <br>
+        </div>
+    
+        
+
+  

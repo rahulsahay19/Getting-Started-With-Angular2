@@ -1,0 +1,23 @@
+<h4 class="ui horizontal divider header">
+          Current choice is {{ myVal }}
+        </h4>
+    
+        <div class="ui raised segment">
+          <ul [ngSwitch]="myVal">
+            <li *ngSwitchWhen="1">Die Another Day</li>
+            <li *ngSwitchWhen="2">GodZilla</li>
+            <li *ngSwitchWhen="3">Day After Tomorrow</li>
+            <li *ngSwitchWhen="4">Independence Day</li>
+            <li *ngSwitchWhen="2">Die Hard</li>
+            <li *ngSwitchDefault>Time Machine</li>
+          </ul>
+        </div>
+    
+        <div style="margin-top: 20px;">
+          <button class="ui primary button" (click)="OnChange()">
+            Next choice
+          </button>
+        </div>
+     
+
+  
