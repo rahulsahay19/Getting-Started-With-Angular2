@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 
 @Component({
   selector: 'login-panel',
-  templateUrl: 'app/Reusable-Component/LoginPanel.html'
+  templateUrl: 'app/Reusable-Component/LoginComponent.html'
  
 })
 

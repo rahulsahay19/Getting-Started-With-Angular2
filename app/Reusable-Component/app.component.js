@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var login_component_1 = require("./login.component");
+var LoginComponent_1 = require("./LoginComponent");
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -20,7 +20,7 @@ var AppComponent = (function () {
             // template:`<c-panel>
             //   Hello Angular 2!!!
             // </c-panel>`
-            directives: [login_component_1.LoginPanelComponent],
+            directives: [LoginComponent_1.LoginPanelComponent],
             template: "<login-panel></login-panel>"
         }), 
         __metadata('design:paramtypes', [])

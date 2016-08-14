@@ -15,11 +15,11 @@ var LoginPanelComponent = (function () {
     LoginPanelComponent = __decorate([
         core_1.Component({
             selector: 'login-panel',
-            templateUrl: 'app/Reusable-Component/LoginPanel.html'
+            templateUrl: 'app/Reusable-Component/LoginComponent.html'
         }), 
         __metadata('design:paramtypes', [])
     ], LoginPanelComponent);
     return LoginPanelComponent;
 }());
 exports.LoginPanelComponent = LoginPanelComponent;
-//# sourceMappingURL=login.component.js.map
+//# sourceMappingURL=LoginComponent.js.map
