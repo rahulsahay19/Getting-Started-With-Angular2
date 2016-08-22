@@ -9,19 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var Panel_component_1 = require("./Panel.component");
-var AppComponent = (function () {
-    function AppComponent() {
+var MoviesComponent = (function () {
+    function MoviesComponent() {
     }
-    AppComponent = __decorate([
+    MoviesComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            directives: [Panel_component_1.CustomPanelComponent],
-            template: "<c-panel>\n    Hello Angular 2!!!\n  </c-panel>"
+            templateUrl: 'app/Routing/Movie-form.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], MoviesComponent);
+    return MoviesComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.MoviesComponent = MoviesComponent;
+//# sourceMappingURL=movies.component.js.map
